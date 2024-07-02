@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  namespace: default
+  name: jesuinoMaster
+spec:
+  profile:
+    displayName: Jesuino Master
+    picture: https://avatars.githubusercontent.com/u/359820?v=4
+  memberOf: [group1, group2]
