@@ -1,0 +1,27 @@
+apiVersion: scaffolder.backstage.io/v1beta3
+kind: Template
+metadata:
+  name: hello-world
+  title: hello-world
+  description: Tests the 'Hello World' action
+spec:
+  owner: jesuino
+  type: service
+  parameters:
+    - title: Enter your name
+      properties:
+        name:
+          title: Name
+          type: string
+          default: "John"
+  steps:
+    - action: message:hello
+      id: say-hello
+      name: Say Hello To the User
+      input:
+        name: ${{ parameters.name }}
+  output:
+    text:
+      - title: Done
+        content: |
+            **Did you see the logs?**
